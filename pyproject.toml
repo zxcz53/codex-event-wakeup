@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codex-event-wakeup"
+version = "0.1.0"
+description = "Event-driven wakeups for long-running Codex jobs"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "codex-event-wakeup contributors" }]
+dependencies = []
+
+[project.scripts]
+cew = "codex_event_wakeup.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+codex_event_wakeup = ["assets/*.md"]
